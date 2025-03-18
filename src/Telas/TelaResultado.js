@@ -13,11 +13,12 @@ export default function TelaResultado({route}) {
 
   const solicitarDados = async (text) => {
     try {
-      const resultado = axios.get(link, {
+      const resultado = await axios.get(link, {
         Params:{
           api_key: API_KEY,
           q: text
         }
+
       })
     
     } catch (error) {
